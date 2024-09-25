@@ -1,5 +1,7 @@
 # clickhouse-go-rows-utils [![Go Reference](https://pkg.go.dev/badge/github.com/EpicStep/clickhouse-go-rows-utils.svg)](https://pkg.go.dev/github.com/EpicStep/clickhouse-go-rows-utils) [![Lint](https://github.com/EpicStep/clickhouse-go-rows-utils/actions/workflows/lint.yml/badge.svg)](https://github.com/EpicStep/clickhouse-go-rows-utils/actions/workflows/lint.yml) [![Test](https://github.com/EpicStep/clickhouse-go-rows-utils/actions/workflows/test.yml/badge.svg)](https://github.com/EpicStep/clickhouse-go-rows-utils/actions/workflows/test.yml)
 
+Library that simplify working with rows in [clickhouse-go](https://github.com/ClickHouse/clickhouse-go).
+
 ## Install
 
 ```shell
