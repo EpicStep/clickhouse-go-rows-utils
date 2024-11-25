@@ -4,7 +4,7 @@ go 1.22.4
 
 require (
 	github.com/ClickHouse/clickhouse-go/v2 v2.29.0
-	github.com/stretchr/testify v1.9.0
+	github.com/stretchr/testify v1.10.0
 	go.uber.org/mock v0.4.0
 )
 
