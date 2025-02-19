@@ -20,6 +20,7 @@ import (
 type MockRows struct {
 	ctrl     *gomock.Controller
 	recorder *MockRowsMockRecorder
+	isgomock struct{}
 }
 
 // MockRowsMockRecorder is the mock recorder for MockRows.
@@ -110,10 +111,10 @@ func (mr *MockRowsMockRecorder) Next() *gomock.Call {
 }
 
 // Scan mocks base method.
-func (m *MockRows) Scan(arg0 ...any) error {
+func (m *MockRows) Scan(dest ...any) error {
 	m.ctrl.T.Helper()
 	varargs := []any{}
-	for _, a := range arg0 {
+	for _, a := range dest {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Scan", varargs...)
@@ -122,30 +123,30 @@ func (m *MockRows) Scan(arg0 ...any) error {
 }
 
 // Scan indicates an expected call of Scan.
-func (mr *MockRowsMockRecorder) Scan(arg0 ...any) *gomock.Call {
+func (mr *MockRowsMockRecorder) Scan(dest ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Scan", reflect.TypeOf((*MockRows)(nil).Scan), arg0...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Scan", reflect.TypeOf((*MockRows)(nil).Scan), dest...)
 }
 
 // ScanStruct mocks base method.
-func (m *MockRows) ScanStruct(arg0 any) error {
+func (m *MockRows) ScanStruct(dest any) error {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ScanStruct", arg0)
+	ret := m.ctrl.Call(m, "ScanStruct", dest)
 	ret0, _ := ret[0].(error)
 	return ret0
 }
 
 // ScanStruct indicates an expected call of ScanStruct.
-func (mr *MockRowsMockRecorder) ScanStruct(arg0 any) *gomock.Call {
+func (mr *MockRowsMockRecorder) ScanStruct(dest any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ScanStruct", reflect.TypeOf((*MockRows)(nil).ScanStruct), arg0)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ScanStruct", reflect.TypeOf((*MockRows)(nil).ScanStruct), dest)
 }
 
 // Totals mocks base method.
-func (m *MockRows) Totals(arg0 ...any) error {
+func (m *MockRows) Totals(dest ...any) error {
 	m.ctrl.T.Helper()
 	varargs := []any{}
-	for _, a := range arg0 {
+	for _, a := range dest {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Totals", varargs...)
@@ -154,7 +155,7 @@ func (m *MockRows) Totals(arg0 ...any) error {
 }
 
 // Totals indicates an expected call of Totals.
-func (mr *MockRowsMockRecorder) Totals(arg0 ...any) *gomock.Call {
+func (mr *MockRowsMockRecorder) Totals(dest ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Totals", reflect.TypeOf((*MockRows)(nil).Totals), arg0...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Totals", reflect.TypeOf((*MockRows)(nil).Totals), dest...)
 }
