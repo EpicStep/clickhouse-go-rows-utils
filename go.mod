@@ -5,7 +5,7 @@ go 1.23.4
 require (
 	github.com/ClickHouse/clickhouse-go/v2 v2.32.1
 	github.com/stretchr/testify v1.10.0
-	go.uber.org/mock v0.5.0
+	go.uber.org/mock v0.5.1
 )
 
 require (
